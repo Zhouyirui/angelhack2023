@@ -76,6 +76,7 @@ while len(sentence) > 0:
             found = True
     if not found:
         break
+print(sentence)
 print(decoded)
 
 # decoded sentence is : i love angelhack code challenge because it is fun and exciting and i dislike the word   that appears in the phrase
