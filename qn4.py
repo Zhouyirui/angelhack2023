@@ -1,21 +1,21 @@
-def solution(arr):
+def solution(arr, debug=False):
     arr.sort()
     min_cost = float('inf')
     for i in range(len(arr)): # exclude i
-        print("======== ", i, "===========")
+        if (debug): print("======== ", i, "===========")
         j = 0
         cost = 0
         elem1, elem2 = None, None
         while (j < len(arr)):
             if (j == i):
-                print("Exclude ", arr[j])
+                if (debug): print("Exclude", arr[j])
                 j += 1
                 continue
             if (elem1 == None):
                 elem1 = arr[j]
             elif (elem2 == None):
                 elem2 = arr[j]
-                print("Pair: ", elem1, elem2)
+                if (debug): print("Pair: ", elem1, elem2)
                 pair_cost = abs(elem1 - elem2)
                 cost += pair_cost
                 elem1, elem2 = None, None
@@ -23,7 +23,7 @@ def solution(arr):
                 print("Error!")
                 return
             j += 1
-        print("cost:", cost)
+        if (debug): print("cost:", cost)
         min_cost = min(min_cost, cost)
     return min_cost
 
