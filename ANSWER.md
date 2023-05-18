@@ -9,5 +9,5 @@ space character or "1111111111", "00" and "01", which corresponds to the word
 readable, the output of the function was examined by a human to distinguish
 between the two cases.
 
-Q6:
+Q6: 84
 Q7: 32509983
