@@ -1,5 +1,5 @@
-C = "1"
-D = "0"
+C = "1" # Cross
+D = "0" # Dot
 layout = [[C, C, C, C, D],
           [C, D, D, D, D],
           [C, D, D, C, D],
@@ -58,13 +58,16 @@ def count_adj(layout, r, c):
     return count
 
 def solution(l):
+    # stores visited to check if layout has appeared before
     visited = set()
+    # visited.add(generate_hash(l))
     while True:
         l = change_layout(l)
         hash = generate_hash(l)
         if hash in visited:
             print(hash)
             count = 0
+            # calculate the result
             for i in range(len(hash)):
                 if hash[i] == "1":
                     count += 2**i

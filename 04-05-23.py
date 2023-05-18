@@ -3,6 +3,8 @@ input = "<<<<<<><><><><<<<><><><><><<<<><><><><><>>>><<><><><><><><><><>>>><<<<<
 test = "<<<"
 go_up = '<'
 go_down = '>'
+
+
 def find_floor(input):
     count = 0
     for i in input:
@@ -11,4 +13,6 @@ def find_floor(input):
         else:
             count -= 1
     print(count)
+
+
 find_floor(input)
